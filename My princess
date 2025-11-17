@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Princess Day!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffccff, #ffffff);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            overflow: hidden; /* For floating hearts */
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff1493;
+            font-weight: bold;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover, nav a.active {
+            color: #ff69b4;
+        }
+        .page {
+            display: none; /* Hide all pages by default */
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s ease-in;
+        }
+        .page.show {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Home-specific styles */
+        #home h1 {
+            font-size: 3em;
+            color: #ff1493;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .heart {
+            font-size: 2em;
+            color: #ff69b4;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .sparkle {
+            animation: sparkle 2s infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        /* About-specific styles */
+        #about h1 {
+            color: #ff1493;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .hearts {
+            font-size: 2em;
+            color: #ff69b4;
+            animation: pulseHearts 1.5s infinite;
+        }
+        @keyframes pulseHearts {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        /* Gallery-specific styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+            animation: sparkleHover 1s infinite;
+        }
+        @keyframes sparkleHover {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.5); }
+        }
+        /* Surprise-specific styles */
+        #surprise h1 {
+            color: #ff1493;
+            animation: wiggle 1s infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-3deg); }
+            75% { transform: rotate(3deg); }
+        }
+        .gift {
+            font-size: 3em;
+            color: #ff69b4;
+            animation: bounceGift 2s infinite;
+        }
+        @keyframes bounceGift {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        .message {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showPage('home')" class="active">Home</a> |
+        <a href="#" onclick="showPage('about')">About Us</a> |
+        <a href="#" onclick="showPage('gallery')">Gallery</a> |
+        <a href="#" onclick="showPage('surprise')">Surprise</a>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page show">
+        <h1>Happy Princess Day, My Love! <span class="heart">❤️</span></h1>
+        <p class="message">
+            My dearest princess, you're the sparkle in my crown and the magic in my heart. <span class="sparkle">✨</span><br>
+            On this special day, I celebrate you the one who turns ordinary moments into fairy tales. I love your smile, your laugh, and how you make me feel like the luckiest prince alive!<br>
+            Here's to endless adventures, sweet kisses, and a lifetime of "happily ever after." You're my everything! 💕
+        </p>
+        <p class="message">
+            Let's make more magic together darlingggggg!
+        </p>
+        <p>Forever yours,<br>Your khadus 😂😚😚💗</p>
+    </div>
+
+    <!-- About Us Page -->
+    <div id="about" class="page">
+        <h1>About Us <span class="hearts">💖💕</span></h1>
+        <p class="message">
+            Once upon a time, a prince met his perfect princess at school  From that moment, our story became a whirlwind of love, laughter, and little adventures.<br>
+            You're my best friend, my confidant, and the one who makes my world brighter. Happy Princess Day may you always shine! 👑<br>
+            Cute fact: You have the cutest giggle, and it melts my heart every time. <span class="hearts">❤️</span><br>
+            Can't wait for our next chapter filled with more romance and dreams come true!
+        </p>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page">
+        <h1>Our Magical Moments ✨</h1>
+        <p class="message">
+            Look at these treasures from our fairy tale! Each photo reminds me of your beauty and our unbreakable bond.<br>
+            You're my princess, my love, my forever. Hover over the pics for extra sparkle just like you! 💖<br>
+            Happy Princess Day let's capture a million more memories!
+        </p>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/200x200/ff69b4/ffffff?text=Our+First+Date" alt="First Date">
+            <img src="https://via.placeholder.com/200x200/ff1493/ffffff?text=Princess+Picnic" alt="Picnic">
+            <img src="https://via.placeholder.com/200x200/pink/ffffff?text=Adventure+Day" alt="Adventure">
+            <!-- Replace with real image URLs -->
+        </div>
+    </div>
+
+    <!-- Surprise Page -->
+    <div id="surprise" class="page">
+        <h1>Surprise! 🎉</h1>
+        <p class="message">
+            Ta-da! You've found the hidden treasure. As your devoted prince, I'm showering you with virtual gifts: a crown, endless hugs, thousand of kisses and a promise that i will never leave you alone my small cutie!<br>
+            You're the most adorable princess ever your smile lights up my world. Happy Princess Day, my love! Let's keep the magic going. 👑💕<br>
+            
+            I loveeeeeeeeee youuuuuhhhhhhhhhhh babyyyy 💗💗💗😚😚
+        </p>
+        <div class="gift">👑✨🎁💖</div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('show'));
+            
+            // Show the selected page
+            document.getElementById(pageId).classList.add('show');
+            
+            // Update active nav link
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
